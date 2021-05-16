@@ -53,7 +53,6 @@ const Contact = ({ navigation }) => {
 <View>
         <View style={styles.first}>
 
-<Text style={{fontSize:28, marginBottom: 50, color: '#742012', backgroundColor:'#f9f69c', width: '100%', height: 100 }}>Contact Us</Text>
 
 <Text style={{fontSize:28,color: '#742012', width: '100%', height: 100 }}>Get in Touch</Text>
 

@@ -56,7 +56,6 @@ const About = ({ navigation }) => {
 
      
         <View>
-        <Text style={{fontSize:28, marginBottom: 50, color: '#742012', backgroundColor:'#f9f69c', width: '100%', height: 100 }}>Contact Me</Text>
 
 <Text style={{margin: 30, fontSize:28, color: '#742012'}}>About</Text>
 <Text style={{margin: 20,fontSize:20, color: '#4c4b55'}}>At the moment, this journey has brought me to Cloud Academy in Mendrisio, Switzerland where I am a full-time Product Designer. In this position, as with freelance, I am working remotely and I have been for approximately two years.</Text>
