@@ -10,6 +10,7 @@ import {
   } from "react-native";
   import { ScaledSheet } from "react-native-size-matters";
   import { WebView } from "react-native-webview";
+
   import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
  const window = Dimensions.get("window");

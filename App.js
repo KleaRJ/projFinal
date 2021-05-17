@@ -1,13 +1,10 @@
 import 'react-native-gesture-handler';
-
-import React, { useState, useEffect } from 'react';
-// import * as React from 'react';
+import * as React from 'react';
 
 import {
   View,
   TouchableOpacity,
-  Image,
-  Dimensions 
+  Image
 } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -33,27 +30,7 @@ const NavigationDrawerStructure = (props)=> {
     props.navigationProps.toggleDrawer();
   };
 
-  const [mode, setMode] = useState("portrait");
-  const [Height_Layout, setHeight_Layout] = useState();
-  const [Width_Layout, setWidth_Layout] = useState();
-
-
-
-  useEffect(() => {
-      DetectOrientation();
-  }, [Height_Layout])
-
-const DetectOrientation = () => {
-  if(Width_Layout > Height_Layout)
-  {
-      setMode("landscape");
-  }
-  else{
-    setMode("portrait");
-  }
-}
-
-
+  
 
   return (
 

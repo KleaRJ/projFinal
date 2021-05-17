@@ -4,14 +4,47 @@ import {
   View,
   Text,
   Image,
-  TextInput 
+  TextInput, Dimensions
 } from 'react-native';
+import { useState, useEffect } from "react";
 import { ScaledSheet } from 'react-native-size-matters';
 
 
 
 
+
 const Home = ({ navigation }) => {
+  const [dimensions, setDimensions] = useState({ window, screen });
+  const [mode, setMode] = useState("portrait");
+
+
+
+  const modeMaker = () => {
+    if (dimensions.screen.width > dimensions.screen.height) {
+      setMode("landscape")
+
+    } else {
+      setMode("portrait")
+
+    }
+    console.log(mode)
+  };
+
+  const onChange = ({ window, screen }) => {
+    setDimensions({ window, screen });
+  };
+
+  useEffect(() => {
+    Dimensions.addEventListener("change", onChange);
+
+    return () => {
+      Dimensions.removeEventListener("change", onChange),
+        modeMaker();
+    };
+
+  });
+
+  
   return (
     <View style={{ flex: 1 }}>
       <View style={{ flex: 1 , padding: 16}}>
