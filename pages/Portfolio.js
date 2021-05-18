@@ -127,7 +127,7 @@ const Portfolio = ({ navigation }) => {
 </View>
 </View>
 
-<Text style={{marginTop: 70, fontSize:32, color: '#742012'}}>Selected Portfolios</Text>
+<Text style={{marginTop: 70, fontSize:32, color: '#742012', marginLeft: 40}}>Selected Portfolios</Text>
 
 
 {/*==========================Photos====================*/}
@@ -306,7 +306,8 @@ const styles = ScaledSheet.create({
         fontSize:18,
         marginLeft: 15,
         backgroundColor: '#742012',
-        color: '#f9f69c'
+        color: '#f9f69c',
+        width: '95%'
 
     },
     download: {
@@ -333,6 +334,7 @@ const styles = ScaledSheet.create({
       backgroundColor : '#742012',
       height: 150,
       marginLeft: 15,
+      width: '95%'
 
 
       },

@@ -361,7 +361,8 @@ backgroundColor: '#742012'
         fontSize:18,
         marginLeft: 15,
         backgroundColor: '#742012',
-        color: '#f9f69c'
+        color: '#f9f69c',
+        width: '95%'
 
     },
     download: {
@@ -388,6 +389,7 @@ backgroundColor: '#742012'
       backgroundColor : '#742012',
       height: 150,
       marginLeft: 15,
+      width: '95%'
 
 
       },

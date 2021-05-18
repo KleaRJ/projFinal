@@ -122,31 +122,31 @@ const Main = ({navigation}) => {
                     <Text style={{margin: 15, fontSize: 42, color: '#fff'}}>Experience</Text>
                     <Text style={{margin: 25, fontSize: 18, color: '#fff'}}>User Experience Designer</Text>
                     <Text style={{marginLeft: 25, fontSize: 18, color: '#fff'}}>Jan 18 - Feb 20</Text>
-                    <Text style={{marginLeft: 325, marginTop: -35, fontSize: 14, color: '#f9f69c'}}>Yeadi Tech,
+                    <Text style={{marginLeft: 305, marginTop: -35, fontSize: 14, color: '#f9f69c'}}>Yeadi Tech,
                         NY</Text>
 
                     <Text style={{marginLeft: 25, marginTop: 45, fontSize: 18, color: '#fff'}}>Web Designer</Text>
                     <Text style={{marginLeft: 25, marginTop: 25, fontSize: 18, color: '#fff'}}>Jan 18 - Feb 20</Text>
-                    <Text style={{marginLeft: 325, marginTop: -35, fontSize: 14, color: '#f9f69c'}}>Yeadi Tech,
+                    <Text style={{marginLeft: 305, marginTop: -35, fontSize: 14, color: '#f9f69c'}}>Yeadi Tech,
                         NY</Text>
 
                     <Text style={{marginLeft: 25, marginTop: 45, fontSize: 18, color: '#fff'}}>UI Designer
                         Designer</Text>
                     <Text style={{marginLeft: 25, marginTop: 25, fontSize: 18, color: '#fff'}}>Jan 18 - Feb 20</Text>
-                    <Text style={{marginLeft: 325, marginTop: -35, marginBottom: 50, fontSize: 14, color: '#f9f69c'}}>Yeadi
+                    <Text style={{marginLeft: 305, marginTop: -35, marginBottom: 50, fontSize: 14, color: '#f9f69c'}}>Yeadi
                         Tech, NY</Text>
 
 
                     <Text style={{margin: 15, fontSize: 42, color: '#fff'}}>Education</Text>
                     <Text style={{margin: 25, fontSize: 18, color: '#fff'}}>Interaction Design</Text>
                     <Text style={{marginLeft: 25, fontSize: 18, color: '#fff'}}>Jan 18 - Feb 20</Text>
-                    <Text style={{marginLeft: 325, marginTop: -35, fontSize: 14, color: '#f9f69c'}}>Yeadi Tech,
+                    <Text style={{marginLeft: 305, marginTop: -35, fontSize: 14, color: '#f9f69c'}}>Yeadi Tech,
                         NY</Text>
 
                     <Text style={{marginLeft: 25, marginTop: 45, fontSize: 18, color: '#fff'}}>Human centered
                         design</Text>
                     <Text style={{marginLeft: 25, marginTop: 25, fontSize: 18, color: '#fff'}}>Jan 18 - Feb 20</Text>
-                    <Text style={{marginLeft: 325, marginTop: -35, marginBottom: 50, fontSize: 14, color: '#f9f69c'}}>Yeadi
+                    <Text style={{marginLeft: 305, marginTop: -35, marginBottom: 50, fontSize: 14, color: '#f9f69c'}}>Yeadi
                         Tech, NY</Text>
 
                 </View>
@@ -192,7 +192,7 @@ const Main = ({navigation}) => {
                     </View>
 
 
-                    <Text style={{marginTop: 70, fontSize: 32, color: '#742012'}}>Selected Portfolios</Text>
+                    <Text style={{marginTop: 70, fontSize: 32, color: '#742012', marginLeft: 30}}>Selected Portfolios</Text>
 
 
                     {/*==========================Photos====================*/}
@@ -380,7 +380,9 @@ const styles = ScaledSheet.create({
         fontSize: 18,
         marginLeft: 15,
         backgroundColor: '#742012',
-        color: '#f9f69c'
+        color: '#f9f69c',
+        width: '95%'
+
 
     },
     download: {
@@ -407,6 +409,8 @@ const styles = ScaledSheet.create({
         backgroundColor: '#742012',
         height: 150,
         marginLeft: 15,
+        width: '95%'
+
 
 
     },

@@ -247,7 +247,8 @@ const styles = ScaledSheet.create({
         fontSize:18,
         marginLeft: 15,
         backgroundColor: '#fff',
-        color: '#4c4b55'
+        color: '#4c4b55',
+        width: '95%'
 
     },
     download: {
@@ -274,6 +275,7 @@ const styles = ScaledSheet.create({
       backgroundColor : '#fff',
       height: 150,
       marginLeft: 15,
+      width: '95%'
 
 
       },
@@ -289,7 +291,8 @@ const styles = ScaledSheet.create({
         borderWidth: 1,
         borderColor: '#000',
         marginVertical: 10,
-        marginLeft: 15
+        marginLeft: 15,
+        width: '95%'
 
 
     },
@@ -308,7 +311,8 @@ const styles = ScaledSheet.create({
           fontSize:18,
           marginLeft: 15,
           backgroundColor: '#742012',
-          color: '#f9f69c'
+          color: '#f9f69c',
+          width: '95%'
 
       },
 
@@ -324,6 +328,8 @@ const styles = ScaledSheet.create({
       backgroundColor : '#742012',
       height: 150,
       marginLeft: 15,
+      width: '95%'
+
 
 
       },
