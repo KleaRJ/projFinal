@@ -4,7 +4,7 @@ import {
   View,
   Text,
   Image,
-  TextInput, Dimensions
+  TextInput, Dimensions, ScrollView
 } from 'react-native';
 import { useState, useEffect } from "react";
 
@@ -15,6 +15,8 @@ import { ScaledSheet } from 'react-native-size-matters';
 
 
 const About = ({ navigation }) => {
+  const window = Dimensions.get('window');
+  const screen = Dimensions.get('screen');
 
   const [dimensions, setDimensions] = useState({ window, screen });
   const [mode, setMode] = useState("portrait");
@@ -46,13 +48,13 @@ const About = ({ navigation }) => {
 
   });
 
-  
+
   return (
-    <View style={{ flex: 1 }}>
+    <ScrollView style={{ flex: 1 }}>
       <View style={{ flex: 1 , padding: 16}}>
 
-        
-      
+
+
         <View
           style={{
             flex: 1,
@@ -65,7 +67,7 @@ const About = ({ navigation }) => {
             }
             title="Home"
           />
-         
+
           <Button
             onPress={
               () => navigation.navigate('Portfolio')
@@ -85,12 +87,12 @@ const About = ({ navigation }) => {
             }
             title="Contact"
           />
-          
+
         </View>
 
 
 
-     
+
         <View>
 
 <Text style={{margin: 30, fontSize:28, color: '#742012'}}>About</Text>
@@ -106,7 +108,7 @@ const About = ({ navigation }) => {
        height:400,
      }}
      source={{uri: 'https://preview.colorlib.com/theme/jonson/assets/img/gallery/about1.png'}}/>
-    </View>  
+    </View>
 
      <View>
 <Text style={{margin:15, fontSize:32, color: '#742012'}}>06 years</Text>
@@ -141,7 +143,7 @@ const About = ({ navigation }) => {
             placeholderTextColor={"#f9f69c"}
 
         />
-      
+
         <TextInput
             style={styles.inputF}
             placeholder="Email"
@@ -150,7 +152,7 @@ const About = ({ navigation }) => {
         />
         <TextInput
             style={styles.inputF}
-           placeholder = "Subject" 
+           placeholder = "Subject"
            placeholderTextColor={"#f9f69c"}
 
         />
@@ -174,15 +176,15 @@ const About = ({ navigation }) => {
 </View>
 
         <View>
-            <Text 
-            style={{fontSize: 16, lineHeight: 25, textAlign: 'center', color: "#f9f69c", backgroundColor : '#742012'}}>Copyright ©2021 All rights reserved | This template is made with ♡ by 
+            <Text
+            style={{fontSize: 16, lineHeight: 25, textAlign: 'center', color: "#f9f69c", backgroundColor : '#742012'}}>Copyright ©2021 All rights reserved | This template is made with ♡ by
             <Text style={{color: '#f9f69c', backgroundColor : '#742012'}}> Colorlib</Text>
             </Text>
         </View>
 
 
-    </View>  
-    
+    </ScrollView>
+
 
 
 
@@ -206,10 +208,10 @@ const styles = ScaledSheet.create({
 
   header:{
     backgroundColor: '#93c2cc',
-    width: '50%', 
-    padding :'10@s', 
+    width: '50%',
+    padding :'10@s',
   },
-  
+
   headText:{
     color: '#252F33',
     fontWeight: 'bold',
@@ -217,7 +219,7 @@ const styles = ScaledSheet.create({
     fontSize: '27@s',
 
     marginLeft: '15@s',
-    marginTop: '25@s' 
+    marginTop: '25@s'
   },
 
   subHead:{
@@ -225,7 +227,7 @@ const styles = ScaledSheet.create({
     fontWeight: 'bold',
     fontFamily: 'Georgia',
     fontSize: '12@s',
-    marginLeft: '30@s', 
+    marginLeft: '30@s',
   },
 
   navBG: {
@@ -245,7 +247,7 @@ const styles = ScaledSheet.create({
   },
 
   navButton:{
-  
+
     paddingHorizontal: '10@s',
     paddingVertical: '8@mvs0.1',
     fontFamily:'Helvetica',
@@ -257,8 +259,8 @@ const styles = ScaledSheet.create({
   body: {
     flex: 1,
     width: '50%',
-    backgroundColor: '#869c81', 
-    padding: '12@s'   
+    backgroundColor: '#869c81',
+    padding: '12@s'
   },
 
   bodyHead:{
@@ -276,7 +278,7 @@ const styles = ScaledSheet.create({
     fontSize: '20@mvs0.1',
     marginVertical: '15@s',
     paddingLeft: 20,
-    
+
   },
   bodyLink: {
     fontSize: '10@mvs0.6',
@@ -316,7 +318,7 @@ backgroundColor: '#742012'
     borderColor: '#fff',
     width: '80%',
     height: 220,
-    color: '#742012', 
+    color: '#742012',
     marginLeft: 30,
     marginBottom:40
   },
@@ -327,7 +329,7 @@ backgroundColor: '#742012'
     borderColor: '#fff',
     width: '80%',
     height: 220,
-    color: '#742012', 
+    color: '#742012',
     marginLeft: 30,
     marginBottom:40
   },
@@ -338,7 +340,7 @@ backgroundColor: '#742012'
     borderColor: '#fff',
     width: '80%',
     height: 220,
-    color: '#742012', 
+    color: '#742012',
     marginLeft: 30,
   },
 
@@ -348,9 +350,9 @@ backgroundColor: '#742012'
   footer: {
     backgroundColor: '#742012',
     marginTop:50,
-    
+
       },
-  
+
       inputF: {
         padding: 20,
         borderWidth: 1,
@@ -360,7 +362,7 @@ backgroundColor: '#742012'
         marginLeft: 15,
         backgroundColor: '#742012',
         color: '#f9f69c'
-        
+
     },
     download: {
         fontSize: 17,
@@ -375,9 +377,9 @@ backgroundColor: '#742012'
     },
 
     TextInputStyleClass1:{
-     
+
       textAlign: 'center',
-      height: 50,
+      // height: 50,
       fontSize: 17,
       padding: 15,
       borderWidth: 2,
@@ -387,14 +389,14 @@ backgroundColor: '#742012'
       height: 150,
       marginLeft: 15,
 
-       
+
       },
 
       subm: {
         fontSize: 20,
         textAlign: 'center',
         padding: 25,
-        backgroundColor: '#f9f69c',   
+        backgroundColor: '#f9f69c',
         width: '95%',
         borderWidth: 1,
         borderColor: '#000',
@@ -402,9 +404,9 @@ backgroundColor: '#742012'
         marginLeft: 15
 
 
-    }, 
+    },
 
-  
+
 });
 
 

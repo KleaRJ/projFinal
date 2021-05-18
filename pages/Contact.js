@@ -4,7 +4,7 @@ import {
   View,
   Text,
   Image,
-  TextInput, Dimensions
+  TextInput, Dimensions, ScrollView
 } from 'react-native';
 import { useState, useEffect } from "react";
 import { ScaledSheet } from 'react-native-size-matters';
@@ -12,7 +12,8 @@ import { ScaledSheet } from 'react-native-size-matters';
 
 
 const Contact = ({ navigation }) => {
-
+    const window = Dimensions.get('window');
+    const screen = Dimensions.get('screen');
 
   const [dimensions, setDimensions] = useState({ window, screen });
   const [mode, setMode] = useState("portrait");
@@ -45,13 +46,13 @@ const Contact = ({ navigation }) => {
   });
 
 
-  
+
   return (
-    <View style={{ flex: 1 }}>
+    <ScrollView style={{ flex: 1 }}>
       <View style={{ flex: 1 , padding: 16}}>
 
-        
-      
+
+
         <View
           style={{
             flex: 1,
@@ -82,7 +83,7 @@ const Contact = ({ navigation }) => {
             }
             title="Blog"
           />
-          
+
         </View>
 
 <View>
@@ -107,7 +108,7 @@ const Contact = ({ navigation }) => {
             placeholderTextColor={"#4c4b55"}
 
         />
-      
+
         <TextInput
             style={styles.inputFt}
             placeholder="Email"
@@ -116,7 +117,7 @@ const Contact = ({ navigation }) => {
         />
         <TextInput
             style={styles.inputFt}
-           placeholder = "Enter subject" 
+           placeholder = "Enter subject"
            placeholderTextColor={"#4c4b55"}
 
         />
@@ -148,15 +149,15 @@ const Contact = ({ navigation }) => {
 
 </View>
 
-  
 
 
-    </View>  
-    
-     
- 
+
+    </View>
+
+
+
 <View>
- 
+
 
     {/*=================================Footer=======================*/}
 
@@ -174,7 +175,7 @@ const Contact = ({ navigation }) => {
             placeholderTextColor={"#f9f69c"}
 
         />
-      
+
         <TextInput
             style={styles.inputF}
             placeholder="Email"
@@ -183,7 +184,7 @@ const Contact = ({ navigation }) => {
         />
         <TextInput
             style={styles.inputF}
-           placeholder = "Subject" 
+           placeholder = "Subject"
            placeholderTextColor={"#f9f69c"}
 
         />
@@ -207,15 +208,15 @@ const Contact = ({ navigation }) => {
 </View>
 
         <View>
-            <Text 
-            style={{fontSize: 16, lineHeight: 25, textAlign: 'center', color: "#f9f69c", backgroundColor : '#742012'}}>Copyright ©2021 All rights reserved | This template is made with ♡ by 
+            <Text
+            style={{fontSize: 16, lineHeight: 25, textAlign: 'center', color: "#f9f69c", backgroundColor : '#742012'}}>Copyright ©2021 All rights reserved | This template is made with ♡ by
             <Text style={{color: '#f9f69c', backgroundColor : '#742012'}}> Colorlib</Text>
             </Text>
         </View>
 
 
-    </View>  
-    
+    </ScrollView>
+
 
 
 
@@ -235,9 +236,9 @@ const styles = ScaledSheet.create({
   first: {
     backgroundColor: '#fff',
     marginTop:50,
-    
+
       },
-  
+
       inputFt: {
         padding: 20,
         borderWidth: 1,
@@ -247,7 +248,7 @@ const styles = ScaledSheet.create({
         marginLeft: 15,
         backgroundColor: '#fff',
         color: '#4c4b55'
-        
+
     },
     download: {
         fontSize: 17,
@@ -262,9 +263,9 @@ const styles = ScaledSheet.create({
     },
 
     TextInputStyleClass:{
-     
+
       textAlign: 'center',
-      height: 50,
+      // height: 50,
       fontSize: 17,
       padding: 15,
       borderWidth: 2,
@@ -274,7 +275,7 @@ const styles = ScaledSheet.create({
       height: 150,
       marginLeft: 15,
 
-       
+
       },
 
 
@@ -283,7 +284,7 @@ const styles = ScaledSheet.create({
         fontSize: 20,
         textAlign: 'center',
         padding: 25,
-        backgroundColor: '#f9f69c',   
+        backgroundColor: '#f9f69c',
         width: '95%',
         borderWidth: 1,
         borderColor: '#000',
@@ -291,14 +292,14 @@ const styles = ScaledSheet.create({
         marginLeft: 15
 
 
-    }, 
+    },
 
     footer: {
       backgroundColor: '#742012',
       marginTop:50,
-      
+
         },
-    
+
         inputF: {
           padding: 20,
           borderWidth: 1,
@@ -308,13 +309,13 @@ const styles = ScaledSheet.create({
           marginLeft: 15,
           backgroundColor: '#742012',
           color: '#f9f69c'
-          
+
       },
 
       TextInputStyleClass1:{
-     
+
       textAlign: 'center',
-      height: 50,
+      // height: 50,
       fontSize: 17,
       padding: 15,
       borderWidth: 2,
@@ -324,7 +325,7 @@ const styles = ScaledSheet.create({
       height: 150,
       marginLeft: 15,
 
-       
+
       },
 
       send: {
@@ -336,12 +337,12 @@ const styles = ScaledSheet.create({
           width: 170,
           borderWidth: 1,
           borderColor: '#742012',
-          marginVertical: 10, 
+          marginVertical: 10,
           marginLeft: 15,
       },
 
 
-  
+
 });
 
 

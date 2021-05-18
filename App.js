@@ -11,11 +11,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-import Home from './pages/Home';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import Main from "./pages/Main";
 
 
 
@@ -30,12 +30,12 @@ const NavigationDrawerStructure = (props)=> {
     props.navigationProps.toggleDrawer();
   };
 
-  
+
 
   return (
 
-    
-    
+
+
     <View style={{ flexDirection: 'row' }}>
       <TouchableOpacity  onPress={()=> toggleDrawer()}>
         {/*Donute Button Image */}
@@ -54,16 +54,16 @@ const NavigationDrawerStructure = (props)=> {
 
 function firstScreenStack({ navigation }) {
   return (
-    
+
 
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           name="Home"
-          component={Home}
+          component={Main}
           options={{
             title: 'Home', //Set Header Title
             headerLeft: ()=>
-              <NavigationDrawerStructure 
+              <NavigationDrawerStructure
                 navigationProps={navigation}
               />,
             headerStyle: {
@@ -76,7 +76,7 @@ function firstScreenStack({ navigation }) {
           }}
         />
       </Stack.Navigator>
-     
+
 
 
 
@@ -181,7 +181,7 @@ function fifthScreenStack({ navigation }) {
         component={About}
         options={{
           title: 'About', //Set Header Title
-          
+
         }}/>
       <Stack.Screen
         name="Portfolio"
@@ -204,27 +204,27 @@ options={{
   title: 'Contact', //Set Header Title
 }}/>
 </Stack.Navigator>
-  
+
   );
 }
 
 function App() {
 
-  
+
   return (
     <NavigationContainer>
-      <Drawer.Navigator 
+      <Drawer.Navigator
      // drawerPosition="right"
      //a drawerStyle={{backgroundColor: '#fff', width: 260}}
         drawerContentOptions={{
           activeTintColor: '#e7d0c0',
           itemStyle: { marginVertical: 5 },
         }}>
-        <Drawer.Screen 
+        <Drawer.Screen
           name="Home"
           options={{ drawerLabel: 'Home' }}
           component={firstScreenStack} />
-        <Drawer.Screen 
+        <Drawer.Screen
           name="About"
           options={{ drawerLabel: 'About' }}
           component={secondScreenStack} />

@@ -4,7 +4,7 @@ import {
   View,
   Text,
   Image,
-  TextInput, Dimensions
+  TextInput, Dimensions, ScrollView,
 } from 'react-native';
 import { useState, useEffect } from "react";
 import { ScaledSheet } from 'react-native-size-matters';
@@ -13,6 +13,8 @@ import { ScaledSheet } from 'react-native-size-matters';
 
 
 const Portfolio = ({ navigation }) => {
+    const window = Dimensions.get('window');
+    const screen = Dimensions.get('screen');
 
   const [dimensions, setDimensions] = useState({ window, screen });
   const [mode, setMode] = useState("portrait");
@@ -45,13 +47,13 @@ const Portfolio = ({ navigation }) => {
   });
 
 
-  
+
   return (
-    <View style={{ flex: 1 }}>
+    <ScrollView style={{ flex: 1 }}>
       <View style={{ flex: 1 , padding: 16}}>
 
-        
-      
+
+
         <View
           style={{
             flex: 1,
@@ -70,7 +72,7 @@ const Portfolio = ({ navigation }) => {
             }
             title="About"
           />
-          
+
           <Button
             onPress={
               () => navigation.navigate('Blog')
@@ -87,7 +89,7 @@ const Portfolio = ({ navigation }) => {
 
 
 
-     
+
 
 
 {/* -----------------------------Expertise ---------------------- */}
@@ -139,7 +141,7 @@ const Portfolio = ({ navigation }) => {
        height:400,
      }}
      source={{uri: 'https://preview.colorlib.com/theme/jonson/assets/img/gallery/gallery1.png'}}/>
-    </View>  
+    </View>
 
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 20}}>
     <Image
@@ -149,7 +151,7 @@ const Portfolio = ({ navigation }) => {
        height:400,
      }}
      source={{uri: 'https://preview.colorlib.com/theme/jonson/assets/img/gallery/gallery2.png'}}/>
-    </View>  
+    </View>
 
 
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 20}}>
@@ -160,7 +162,7 @@ const Portfolio = ({ navigation }) => {
        height:400,
      }}
      source={{uri: 'https://preview.colorlib.com/theme/jonson/assets/img/gallery/gallery3.png'}}/>
-    </View>  
+    </View>
 
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 20}}>
     <Image
@@ -170,7 +172,7 @@ const Portfolio = ({ navigation }) => {
        height:400,
      }}
      source={{uri: 'https://preview.colorlib.com/theme/jonson/assets/img/gallery/gallery4.png'}}/>
-    </View>  
+    </View>
 
     {/*=================================Footer=======================*/}
 
@@ -188,7 +190,7 @@ const Portfolio = ({ navigation }) => {
             placeholderTextColor={"#f9f69c"}
 
         />
-      
+
         <TextInput
             style={styles.inputF}
             placeholder="Email"
@@ -197,7 +199,7 @@ const Portfolio = ({ navigation }) => {
         />
         <TextInput
             style={styles.inputF}
-           placeholder = "Subject" 
+           placeholder = "Subject"
            placeholderTextColor={"#f9f69c"}
 
         />
@@ -221,18 +223,18 @@ const Portfolio = ({ navigation }) => {
 </View>
 
         <View>
-            <Text 
-            style={{fontSize: 16, lineHeight: 25, textAlign: 'center', color: "#f9f69c", backgroundColor : '#742012'}}>Copyright ©2021 All rights reserved | This template is made with ♡ by 
+            <Text
+            style={{fontSize: 16, lineHeight: 25, textAlign: 'center', color: "#f9f69c", backgroundColor : '#742012'}}>Copyright ©2021 All rights reserved | This template is made with ♡ by
             <Text style={{color: '#f9f69c', backgroundColor : '#742012'}}> Colorlib</Text>
             </Text>
         </View>
 
 
-    </View>  
-    
+    </View>
 
 
-</View>
+
+</ScrollView>
 
 
 
@@ -244,7 +246,7 @@ const Portfolio = ({ navigation }) => {
 }
 
 const styles = ScaledSheet.create({
-  
+
   photos: {
 
     backgroundColor: '#f9f69c'
@@ -261,7 +263,7 @@ const styles = ScaledSheet.create({
     borderColor: '#000',
     width: '80%',
     height: 220,
-    color: '#742012', 
+    color: '#742012',
     marginLeft: 30,
     marginBottom:40
   },
@@ -272,7 +274,7 @@ const styles = ScaledSheet.create({
     borderColor: '#000',
     width: '80%',
     height: 220,
-    color: '#742012', 
+    color: '#742012',
     marginLeft: 30,
     marginBottom:40
   },
@@ -283,7 +285,7 @@ const styles = ScaledSheet.create({
     borderColor: '#000',
     width: '80%',
     height: 220,
-    color: '#742012', 
+    color: '#742012',
     marginLeft: 30,
   },
 
@@ -293,9 +295,9 @@ const styles = ScaledSheet.create({
   footer: {
     backgroundColor: '#742012',
     marginTop:50,
-    
+
       },
-  
+
       inputF: {
         padding: 20,
         borderWidth: 1,
@@ -305,7 +307,7 @@ const styles = ScaledSheet.create({
         marginLeft: 15,
         backgroundColor: '#742012',
         color: '#f9f69c'
-        
+
     },
     download: {
         fontSize: 17,
@@ -320,9 +322,9 @@ const styles = ScaledSheet.create({
     },
 
     TextInputStyleClass1:{
-     
+
       textAlign: 'center',
-      height: 50,
+      // height: 50,
       fontSize: 17,
       padding: 15,
       borderWidth: 2,
@@ -332,14 +334,14 @@ const styles = ScaledSheet.create({
       height: 150,
       marginLeft: 15,
 
-       
+
       },
 
       subm: {
         fontSize: 20,
         textAlign: 'center',
         padding: 25,
-        backgroundColor: '#f9f69c',   
+        backgroundColor: '#f9f69c',
         width: '95%',
         borderWidth: 1,
         borderColor: '#000',
@@ -347,10 +349,10 @@ const styles = ScaledSheet.create({
         marginLeft: 15
 
 
-    }, 
-  
+    },
 
-  
+
+
 });
 
 
